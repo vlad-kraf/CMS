@@ -20,6 +20,7 @@ class Products extends Database
         $val_sql = implode(',',$values);
 
         $query = "INSERT INTO products ($colum_sql) VALUES ($val_sql)";
+        echo $query;
         $this->query($query);
         return $this->resId();
     }
@@ -29,14 +30,14 @@ class Products extends Database
         if(empty($id)) {
             return false;
         }
-        $query = "SELECT id,name, description, url, visible FROM products WHERE id = $id LIMIT 1";
+        $query = "SELECT id,title, content, url, visible FROM products WHERE id = $id LIMIT 1";
         $this->query($query);
         return $this->result();
     }
     public function getProducts()
     {
 
-        $query = "SELECT id,name, description, url, visible FROM products";
+        $query = "SELECT id,title, content, url, visible FROM products";
         $this->query($query);
         return $this->results();
     }

@@ -10,11 +10,11 @@ class ProductAdmin extends CoreAdmin
         $product = new stdClass();
 
         if($request->method() == 'POST') {
-            $product->name = $request->post('name');
-            $product->description = $request->post('description');
+            $product->title = $request->post('title');
+            $product->content = $request->post('content');
             $product->visible = $request->post('visible','integer');
             if(empty($request->post('url'))) {
-                $product->url = CoreAdmin::translit($request->post('name'));
+                $product->url = CoreAdmin::translit($request->post('title'));
             } else {
                 $product->url = $request->post('url');
             }

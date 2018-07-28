@@ -34,9 +34,9 @@ class Database
     }
     public function results()
     {
-        //print_r($this->mysqli);
         $this->mysqli->errno;
         $this->mysqli->error;
+        $results = array();
         while ($res = $this->res->fetch_assoc()) {
             $results[] = $res;
         }
