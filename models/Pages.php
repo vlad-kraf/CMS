@@ -15,7 +15,6 @@ class Pages extends Database
         $val_sql = implode(',',$values);
 
         $query = "INSERT INTO pages ($colum_sql) VALUES ($val_sql)";
-
         $this->query($query);
         return $this->resId();
     }
@@ -25,14 +24,14 @@ class Pages extends Database
         if(empty($id)) {
             return false;
         }
-        $query = "SELECT id,name, description, url, visible FROM pages WHERE $type = $id LIMIT 1";
+        $query = "SELECT id, title, content, url, visible FROM pages WHERE $type = $id LIMIT 1";
         $this->query($query);
         return $this->result();
     }
     public function getPages()
     {
 
-        $query = "SELECT id,name, description, url, visible FROM pages";
+        $query = "SELECT id, title, content, url, visible FROM pages";
         $this->query($query);
         return $this->results();
     }

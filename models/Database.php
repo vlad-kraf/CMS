@@ -37,6 +37,7 @@ class Database
         $this->mysqli->errno;
         $this->mysqli->error;
         $results = array();
+        //var_dump($res = $this->res);
         while ($res = $this->res->fetch_assoc()) {
             $results[] = $res;
         }

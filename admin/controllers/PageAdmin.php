@@ -10,11 +10,11 @@ class PageAdmin extends CoreAdmin
         $page = new stdClass();
 
         if($request->method() == 'POST') {
-            $page->name = $request->post('name');
-            $page->description = $request->post('description');
+            $page->title = $request->post('title');
+            $page->content = $request->post('content');
             $page->visible = $request->post('visible','integer');
             if(empty($request->post('url'))) {
-                $page->url = CoreAdmin::translit($request->post('name'));
+                $page->url = CoreAdmin::translit($request->post('title'));
             } else {
                 $page->url = $request->post('url');
             }
