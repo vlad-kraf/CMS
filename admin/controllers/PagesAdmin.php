@@ -5,7 +5,6 @@ class PagesAdmin extends CoreAdmin
     {
 
         $pages = new Pages();
-        //////////////////////
         $all_pages = $pages->getPages();
 
         $array_vars = array(

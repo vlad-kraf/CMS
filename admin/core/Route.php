@@ -11,6 +11,8 @@ class Route
         $uri_array = array(
             '/admin/' => 'MainAdmin',
             '/admin/products/' => 'CatalogAdmin',
+            '/admin/categories/' => 'CategoriesAdmin',
+            '/admin/category' => 'CategoryAdmin',
             '/admin/product' => 'ProductAdmin',
             '/admin/pages' => 'PagesAdmin',
             '/admin/page' => 'PageAdmin',
