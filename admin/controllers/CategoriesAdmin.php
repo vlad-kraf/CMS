@@ -9,7 +9,7 @@ class CategoriesAdmin extends CoreAdmin
 
 
         $array_vars = array(
-            'Categories' => $all_categories,
+            'categories' => $all_categories,
             'name' => 'Categories',
 
         );
