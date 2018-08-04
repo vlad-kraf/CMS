@@ -19,7 +19,7 @@
         </div>
         <div class="form-group">
             <label>Видимость</label>
-            <input class="form-control" type="checkbox" name="visible" value="{{ category.visible }}">
+            <input class="form-control" type="checkbox" name="visible"  {% if category.visible %}checked {% endif %} value="1"/>
         </div>
         <div class="form-group">
             <label>Описание</label>

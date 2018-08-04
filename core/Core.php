@@ -11,6 +11,7 @@ class Core
             'cache'       => 'cache',
             'auto_reload' => true
         ));
+
         $this->view = $twig;
     }
 }
