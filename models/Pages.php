@@ -24,10 +24,13 @@ class Pages extends Database
         if(empty($id)) {
             return false;
         }
-        $query = "SELECT id, title, content, url, visible FROM pages WHERE $type = $id LIMIT 1";
+        $query = "SELECT id, title, content, url, visible FROM pages WHERE $type = '$id' LIMIT 1";
+      //  var_dump($query);
         $this->query($query);
         return $this->result();
     }
+
+
     public function getPages()
     {
 

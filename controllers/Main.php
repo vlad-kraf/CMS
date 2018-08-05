@@ -11,8 +11,7 @@ class Main extends Core
             'pages' => $pages
         );
     
-        //echo $this->view->render('main.html',$array_vars);
-        print $this->view->render('main.html',$array_vars);
+        echo $this->view->render('main.html',$array_vars);
 
     }
 }
