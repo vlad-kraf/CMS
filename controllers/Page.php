@@ -14,24 +14,12 @@ class Page extends Core
             $page = (object) $pages->getPage($parts[1],'url');
 
         }
-        //$object = (object) $page;
-       // print_r($object->url);
 
         $array_vars = array(
-            'title' => $page->url,
-            'content' => $page->content,
-
+            'page' => $page,
         );
-       //  print_r($array_vars);
-
-
-  //     $page = $pages->getPage($parts[1],'url');
-        $page = (object) $pages->getPage($parts[1],'url');
-
-
 
         if(isset($page->url)) {
-            print_r($array_vars);
             return $this->view->render('page.html',$array_vars);
 
         } else {
