@@ -4,8 +4,14 @@
 {% block content %}
     <h1>{{ name }}</h1>
 
-    <div id="books">
-
+    <div id="products">
+        <ul class=horizontal>
+            {% for product in products %}
+                <li>
+                    <a href="/{{ product.url }}">{{ product.title }}</a>
+                </li>
+            {% endfor %}
+        </ul>
     </div>
     <h2>sadasdsa</h2>
 {% endblock %}
