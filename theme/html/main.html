@@ -2,18 +2,26 @@
 
 
 {% block content %}
-    <h1>{{ name }}</h1>
+    
 
-    <div id="products">
-        <ul class=horizontal>
-            {% for product in products %}
-                <li>
-                    <a href="/{{ product.url }}">{{ product.title }}</a>
-                </li>
-            {% endfor %}
-        </ul>
+    <div class="row">
+        <div class="col-lg-2">
+                <h5>{{ name }}</h5>
+        </div>
+
+        <div class="col-lg-10">
+            <div id="products"> 
+                    {% for product in products %}
+                        <div class=col-lg-2>
+                            <a href="/{{ product.url }}">{{ product.title }}</a>
+                        </div>
+                    {% endfor %}
+
+            </div>
+        </div>
     </div>
-    <h2>sadasdsa</h2>
+
+    <h5>sadasdsa</h5>
 {% endblock %}
 
 

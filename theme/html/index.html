@@ -3,18 +3,27 @@
     <head>
         <title>{% block title %}{% endblock %}</title>
         <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
+        <link href="/theme/assets/css/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+        <link href="/theme/assets/css/flat-ui.min.css" rel="stylesheet">
+        <link rel="shortcut icon" href="../assets/img/favicon.ico">
         <link href="theme/assets/css/style.css" rel="stylesheet" type="text/css" >
     </head>
     <body>
-        <div id="header">
-                <ul class=horizontal>
-                    {% for page in pages %}
-                        <li>
-                            <a href="/{{ page.url }}">{{ page.title }}</a>
-                        </li>
-                    {% endfor %}
-                </ul>
-        </div>
+    <header class="header-navbar clearfix">
+            <nav class="navbar navbar-inverse navbar-fixed-top">
+                <div class="container">
+                    <div class="collapse navbar-collapse navbar-main-collapse">
+                        <ul class="nav navbar-nav navbar-right">
+                            {% for page in pages %}
+                                <li class=" ">
+                                    <a href="/{{ page.url }}">{{ page.title }}</a>
+                                </li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+    </header>       
     
         <div id="content">
                 
